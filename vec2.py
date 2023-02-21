@@ -8,7 +8,8 @@ class Vec2:
 
     def __init__(self, x, y):
         try:
-            float(x) and float(y)
+            float(x)
+            float(y)
         except:
             sys.quit("Not valid number")
         
