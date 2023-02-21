@@ -11,7 +11,7 @@ class Vec2:
             float(x)
             float(y)
         except:
-            sys.quit("Not valid number")
+            sys.exit("Not valid number")
         
         if x == 0 and y == 0:
             sys.exit("Both vector components can't be zero")
