@@ -1,14 +1,14 @@
 from vec2 import *
-import sys
+import error
 
 # Gets an input, and if the input is a float, it will it return it, otherwise it will quit
-def get_float_input(msg) -> float:
-    inp = input(msg)
+def get_float_input(msg="") -> float:
     try:
-        return float(inp)
+        return float(input(msg))
+    except ValueError:
+        error.val_error()
     except:
-        sys.exit("Not valid number")
-
+        error.unknown_error()
 
 
 if __name__ == "__main__":

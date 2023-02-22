@@ -1,5 +1,5 @@
 import math
-import sys
+import error
 
 class Vec2:
     x: float = 0
@@ -10,11 +10,14 @@ class Vec2:
         try:
             float(x)
             float(y)
+        except ValueError:
+            error.val_error()
         except:
-            sys.exit("Not valid number")
+            error.unknown_error()
+
         
         if x == 0 and y == 0:
-            sys.exit("Both vector components can't be zero")
+            error.zero_error()
         
         self.x = x
         self.y = y
